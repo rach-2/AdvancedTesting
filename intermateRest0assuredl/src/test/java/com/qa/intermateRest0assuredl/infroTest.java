@@ -79,22 +79,20 @@ public class infroTest
 
 	   @Then("^the Rated Field is equal to \"([^\"]*)\"$")
 	   public void the_Rated_Field_is_equal_to(String arg1)  {
-	       // Write code here that turns the phrase above into concrete actions
-	        ///response 
+	       request.then();
 	   }
 	   
 	   @Then("^the Rated Field is equal to R$")
 	   public void the_Rated_Field_is_equal_to_R() throws Throwable {
 	       // Write code here that turns the phrase above into concrete actions
-	       given().get("http://www.omdbapi.com/?apikey=83608b19&t='IT'")
-	       .then().body("Rated", equalTo("R"));
+	       request.then().body("Rated", equalTo("R"));
 	   }
 
 
 	   @Then("^the status code reads (\\d+)$")
 	   public void the_status_code_reads(int arg1) throws Throwable {
 	       // Write code here that turns the phrase above into concrete actions
-	       
+	       request.then().statusCode(arg1);
 	   }
 	   
 

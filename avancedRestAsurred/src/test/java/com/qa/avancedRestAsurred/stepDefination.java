@@ -31,14 +31,14 @@ public class stepDefination
 	@Given("the server adress")
 	public void serrverAdresss()
 	{
-		request = given().contentType("serverAdress");
-		request.get("");
+		request = given().contentType(ContentType.JSON);
 	}
 	@When("^I post a the a hotel to the server$")
 	public void i_post_a_the_a_hotel_to_the_server() throws Throwable {
 	    // Write code here that turns the phrase above into concrete actions
-	    throw new PendingException();
+	    
 	}
+	
 
 	@Then("^the hotel exsits$")
 	public void the_hotel_exsits() throws Throwable {
